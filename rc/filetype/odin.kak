@@ -38,6 +38,8 @@ add-highlighter shared/odin/inline_documentation region /// $ fill documentation
 add-highlighter shared/odin/line_comment region // $ fill comment
 
 add-highlighter shared/odin/code/ regex "(?<!\w)@\w+\b" 0:meta
+add-highlighter shared/odin/code/operator regex "(=|!|#|@|\$|\^|\?|\+|-|\*|/|%|%%|&|\||~|&~|<<|>>|&&|\|\||\+=|-=|\*=|/=|%=|%%=|&=|\|=|~=|&~=|<<=|>>=|&&=|\|\|=|\+\+|--|---|==|!=|<|>|<=|>=|:|\.\.|\.\.=|\.\.<|\|\*\*)" 1:operator
+add-highlighter shared/odin/code/function_call regex "\b(\w*)\b\h*(?:\[[\w\s\.,]*\])?\h*\(" 1:function
 
 # Commands
 # ‾‾‾‾‾‾‾‾
@@ -93,9 +95,10 @@ evaluate-commands %sh{
            rawptr
            typeid
            any'
-    keywords='asm auto_cast bit_set break case cast context continue defer distinct do dynamic else enum
-              fallthrough for foreign if import in map not_in or_else or_return package proc return struct
-              switch transmute typeid union using when where'
+    keywords='asm auto_cast bit_field bit_set break case cast context continue defer distinct
+              do dynamic else enum fallthrough for foreign if import in map matrix not_in
+              or_break or_continue or_else or_return package proc return struct switch
+              transmute typeid union using when where'
     attributes=''
     # ---------------------------------------------------------------------------------------------- #
     join() { sep=$2; eval set -- $1; IFS="$sep"; echo "$*"; }

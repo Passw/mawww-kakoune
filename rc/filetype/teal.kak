@@ -71,7 +71,7 @@ hook global WinSetOption filetype=teal %§
         , Kx \
         <a-K>\A\h*--<ret> \
         <a-K>\A\N*\b(end|until)\b<ret> \
-        <a-k>\A(\h*\b(do|else|elseif|for|(local\h+)?function|if|repeat|while)\b|\N*[({]$|\N*\bfunction\b\h*[(])<ret> \
+        <a-k>\A(\h*\b(do|else|elseif|for|(local\h+)?(function|macroexp|record|enum|inteface)|if|repeat|while)\b|\N*[({]$|\N*\b(function|macroexp)\b\h*[(])<ret> \
         <a-:><semicolon><a-gt>
       ]
     ]

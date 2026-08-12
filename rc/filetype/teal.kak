@@ -71,7 +71,7 @@ hook global WinSetOption filetype=teal %§
         , Kx \
         <a-K>\A\h*--<ret> \
         <a-K>\A\N*\b(end|until)\b<ret> \
-        <a-k>\A(\h*\b(do|else|elseif|for|(local\h+)?(function|macroexp|record|enum|inteface)|if|repeat|while)\b|\N*[({]$|\N*\b(function|macroexp)\b\h*[(])<ret> \
+        <a-k>\A(\h*\b(do|else|elseif|for|((local|global)\h+)?(function|macroexp|record|enum|inteface)|if|repeat|while)\b|\N*[({]$|\N*\b(function|macroexp)\b\h*[(])<ret> \
         <a-:><semicolon><a-gt>
       ]
     ]
@@ -89,7 +89,7 @@ hook global WinSetOption filetype=teal %§
           # check that starts with a block keyword that is not closed on the same line
           execute-keys -draft \
             kx \
-            <a-k>^\h*\b(else|elseif|do|for|(local\h+)?(function|macroexp|record|enum|inteface)|if|while)\b|\N\b(function|macroexp)\b\h*[(]<ret> \
+            <a-k>^\h*\b(else|elseif|do|for|((local|global)\h+)?(function|macroexp|record|enum|inteface)|if|while)\b|\N\b(function|macroexp)\b\h*[(]<ret> \
             <a-K>\bend\b<ret>
           # check that the block is empty and is not closed on a different line
           execute-keys -draft <a-a>i <a-K>^\N+\n\N+\n<ret> jx <a-K>^<c-r>x\b(else|elseif|end)\b<ret>

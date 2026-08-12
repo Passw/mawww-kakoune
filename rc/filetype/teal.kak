@@ -23,7 +23,7 @@ provide-module -override teal %§
   declare-option str-list tl_static_words                                        \
   'function' 'boolean' 'number' 'integer' 'string' 'nil' 'thread' 'any' 'macroexp' 'enum' 'record' 'interface'     \
   'local' 'global' 'is' 'end' 'metamethod' 'return' 'print' 'table' 'false' 'true' 'self' 'break' 'and' 'or' 'not'   \
-  'do' 'else' 'elseif' 'end' 'for' 'function' 'goto' 'if' 'in' 'local' 'repeat' 'return' 'then' 'until' 'while'    \
+  'do' 'else' 'elseif' 'end' 'for' 'function' 'goto' 'if' 'in' 'repeat' 'return' 'then' 'until' 'while'    \
   'require' 'as' 'where' '__is' '__add' '__sub' '__mul' '__div' '__mod' '__pow' '__unm' '__idiv' '__band' '__bor'  \
   '__bxor' '__bnot' '__shl' '__shr' '__concat' '__len' '__eq' '__lt' '__le' '__index' '__newindex' '__call'      \
   '__tostring' '__tonumber' '__gc' '__close' '__pairs' '__ipairs' 'io' 'debug' 'pairs' 'ipairs' 'assert' 'tostring'  \

@@ -8,12 +8,12 @@ provide-module -override teal %§
   add-highlighter shared/teal/code default-region group
   add-highlighter shared/teal/code/base ref lua
   add-highlighter shared/teal/code/constant regex '\b([A-Z_]+)\b' 0:value
-  add-highlighter shared/teal/code/operators regex '\b(is|as)\b' 0:operator
   add-highlighter shared/teal/code/function_call regex '\b([a-zA-Z_]\w*)\h*(?=[\(\{"''])' 1:function
   add-highlighter shared/teal/code/builtin_types regex '\b(boolean|number|integer|thread|any)\b' 0:type
-  add-highlighter shared/teal/code/string_type regex '\b(string)\b\h*(?![\.\h])' 1:type
-  add-highlighter shared/teal/code/keywords regex '\b(enum|record|interface|global|macroexp|metamethod|metatable|where)\b' 0:keyword
-  add-highlighter shared/teal/code/type_keyword regex '\b(type)\b\h*h*(?![\(\{\h"''])' 1:keyword
+  add-highlighter shared/teal/code/string_type regex '\b(string)\b\h*(?![\(\{\.\h:="''])' 1:type
+  add-highlighter shared/teal/code/keywords regex '\b(function|enum|record|interface|global|macroexp|metamethod|metatable|where)\b' 0:keyword
+  add-highlighter shared/teal/code/type_keyword regex '\b(type)\b\h*h*(?![\(\{\h:="''])' 1:keyword
+  add-highlighter shared/teal/code/operators regex '\b(and|or|not|is|as)\b' 0:operator
 
   add-highlighter shared/teal/multiline_string  region -match-capture   '\[(=*)\[' '\](=*)\]' fill string
   add-highlighter shared/teal/multiline_comment region -match-capture '--\[(=*)\[' '\](=*)\]' fill comment

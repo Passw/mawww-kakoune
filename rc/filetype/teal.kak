@@ -11,7 +11,7 @@ provide-module -override teal %§
   add-highlighter shared/teal/code/function_call regex '\b([a-zA-Z_]\w*)\h*(?=[\(\{"''])' 1:function
   add-highlighter shared/teal/code/builtin_types regex '\b(boolean|number|integer|thread|any)\b' 0:type
   add-highlighter shared/teal/code/string_type regex '\b(string)\b\h*(?![\(\{\.\h:="''])' 1:type
-  add-highlighter shared/teal/code/keywords regex '\b(function|enum|record|interface|global|macroexp|metamethod|metatable|where)\b' 0:keyword
+  add-highlighter shared/teal/code/keywords regex '\b(function|enum|record|interface|global|macroexp|metamethod|metatable|where|break|do|else|elseif|end|for|goto|if|in|local|repeat|return|then|until|while)\b' 0:keyword
   add-highlighter shared/teal/code/type_keyword regex '\b(type)\b\h*h*(?![\(\{\h:="''])' 1:keyword
   add-highlighter shared/teal/code/operators regex '\b(and|or|not|is|as)\b' 0:operator
 
